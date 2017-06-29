@@ -5,6 +5,7 @@ hrApp.controller('EmployeeViewController', ['$scope', '$http', '$routeParams', '
         $scope.employee = {};
 
 
+
         // TODO #HR6 get employee by id
 
         $http.get(commonResourcesFactory.findOneEmployeeUrl+$routeParams.employeeid)
@@ -18,7 +19,8 @@ hrApp.controller('EmployeeViewController', ['$scope', '$http', '$routeParams', '
         $scope.back = function() {
             // TODO back to Employee List page
 
-            window.history.back();
+            // window.history.back();
+            $location.url("/employeeslist");
         }
 
     }]);

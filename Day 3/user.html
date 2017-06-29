@@ -1,0 +1,98 @@
+<form ng-controller="UserController">
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h2 class="panel-title">Add User</h2>
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="fName">First Name:</label>
+                    <input type="text" id="fName" ng-model="fName" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="lName">Last Name:</label>
+                    <input type="text" id="lName" ng-model="lName" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="mail">Email:</label>
+                    <input type="text" id="mail" ng-model="mail" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" ng-model="phone" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="birthDate">Birth Date:</label>
+                    <input type="text" id="birthDate" ng-model="birthDate" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="cnp">CNP:</label>
+                    <input type="text" id="cnp" ng-model="cnp" class="form-control"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="backToMainPage()">Back</button>
+
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button  class="btn btn-default" ng-click="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="save()">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="show()">Show/Hide</button>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+</div>
+
+    <div ng-repeat="user in userList" ng-show="showList">
+        <p>First Name: {{user.fName}}</p>
+        <p>Last Name: {{user.lName}}</p>
+        <p>Email: {{user.mail}}</p>
+        <p>Phone Number: {{user.phone}}</p>
+        <p>Birth Date: {{user.birthDate}}</p>
+        <p>CNP: {{user.cnp}}</p>
+
+    </div>
+</form>
