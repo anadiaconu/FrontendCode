@@ -1,0 +1,15 @@
+<div ng-controller="FormsController">
+
+    <ng-form name="myForm" ng-controller="FormsController" class="my-form">
+        userType: <input name="input1" ng-model="userType" required>
+        <span class="error" ng-show="myForm.input1.$error.required">Required!</span><br>
+        name: <input name="input2" ng-model="name" required>
+        <span class="pristine" ng-show="myForm.input2.$pristine">Don't forget to write your name!</span><br>
+        <span class="dirty" ng-show="myForm.input2.$dirty">Thank you for writing your name!</span><br>
+        <span class="valid" ng-show="myForm.$valid">Form Valid!</span><br>
+        <span class="invalid" ng-show="myForm.$invalid">Form Invalid! Make sure all inputs are completed.</span><br>
+        <button ng-click="submit()"> Submit</button>
+    </ng-form>
+
+
+</div>

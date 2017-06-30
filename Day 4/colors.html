@@ -1,0 +1,25 @@
+
+<div ng-controller="ColorsController">
+<div><select ng-model="myColor1" ng-options="color.text for color in colors track by color.text" ng-change="changeColor()"></select>
+<br><br></div><div>
+    <select ng-model="myColor" ng-options="color.text group by color.type for color in colors"></select>
+    <br><br></div>
+<div>
+    <div>
+
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" ng-model="input1"/>
+        <br><br> </div>
+    <div>
+
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" ng-model="input2"/>
+    </div>
+<span style="font-size: 50px" class="form-group" ng-class="col">Ceva blabla</span>
+    <br><br>
+    <p><b>Text in Colors Array ordered by input1:</b></p>
+    <div ng-repeat="color in colors | filter:'input1'"><ul>{{color.text}}</ul></div>
+    <p><b>Text in Colors Array filtered by input2:</b></p>
+    <div ng-repeat="color in colors | orderBy:'input2'"><ul>{{color.text}}</ul></div>
+</div>
+</div>
